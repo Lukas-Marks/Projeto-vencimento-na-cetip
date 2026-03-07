@@ -12,7 +12,7 @@ URL = "https://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/marke
 
 
 def acessar_pagina(driver, wait):
-    """Acessa a página e entra no iframe."""
+    """Acessa a página e entra no iframe"""
     driver.get(URL)
     wait.until(EC.frame_to_be_available_and_switch_to_it((By.ID, "bvmf_iframe")))
     wait.until(EC.presence_of_element_located((By.ID, "isinCode")))
